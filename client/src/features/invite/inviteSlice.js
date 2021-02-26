@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios'
 
 export const inviteSlice = createSlice({
   name: 'invite',
@@ -30,7 +31,10 @@ export const { increment, decrement, incrementByAmount } = inviteSlice.actions;
 // code can then be executed and other actions can be dispatched
 export const incrementAsync = amount => dispatch => {
   setTimeout(() => {
-    dispatch(incrementByAmount(amount));
+    axios.get('/test')
+    .then(resp => {
+        console.log(resp)
+    })
   }, 1000);
 };
 
