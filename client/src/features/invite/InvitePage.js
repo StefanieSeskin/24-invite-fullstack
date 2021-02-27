@@ -45,7 +45,9 @@ export default function InvitePage() {
 
     return (
         <div className="selectRSVP">
-            <div className="email">{guest.first}{guest.email}</div>
+            <div className="name"><strong>Name:</strong></div>
+            <div className="email"><strong>Email:</strong> {guest.email}</div>
+            <div className="phone"><strong>Phone:</strong></div>
         <button className="notgoing" onClick={notGoing}><FaTimes /></button>
         <button className="going" onClick={addGoing}><FaCheck /></button></div>
     )
