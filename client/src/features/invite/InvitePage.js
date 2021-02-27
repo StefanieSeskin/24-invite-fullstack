@@ -1,3 +1,4 @@
+import { FaCheck } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
@@ -44,7 +45,11 @@ export default function InvitePage() {
     return (
         <div className="selectRSVP">
             <div className="photo">{guest.email}</div>
-        <button onClick={addGoing}>GOING</button>
-        <button onClick={notGoing}>NOT GOING</button></div>
+        <button className="notgoing" onClick={notGoing}>X</button>
+        <button className="going" onClick={addGoing}><FaCheck /></button></div>
     )
 }
+
+//something about asynchronous code.  Need to get name.first and name.last, photo,
+//etc
+// but they don't exist..  This is as far as I can get
