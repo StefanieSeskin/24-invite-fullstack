@@ -4,7 +4,9 @@ import axios from 'axios'
 export const inviteSlice = createSlice({
   name: 'invite',
   initialState: {
-    value: 0,
+    // value: 0,
+    going: [],
+    notgoing: []
   },
   reducers: {
     increment: state => {
@@ -20,18 +22,30 @@ export const inviteSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
+
+    wasInvited: (state, action) => {
+      state.invited.push(action.payload);
+    },
+
+    addToGoing: (state, action) => {
+      console.log(action.payload)
+      state.going.push(action.payload);
+    },
+    addToNotGoing: (state, action) => {
+      state.notgoing.push(action.payload)
+    }
   },
 });
 
-export const { increment, decrement, incrementByAmount } = inviteSlice.actions;
+export const { increment, decrement, incrementByAmount, wasInvited, addToGoing, addToNotGoing } = inviteSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched
-export const incrementAsync = amount => dispatch => {
+export const incrementAsync = guest => dispatch => {
   setTimeout(() => {
-    axios.get('/test')
+    axios.post('/going', { guest })
     .then(resp => {
         console.log(resp)
     })
@@ -40,7 +54,19 @@ export const incrementAsync = amount => dispatch => {
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
-// in the slice file. For example: `useSelector((state) => state.invite.value)`
+// in the islce file. For example: `useSelector((state) => state.invite.value)`
 export const selectCount = state => state.invite.value;
+
+export const getIsGoing = function(state) {
+    return state.going
+}
+
+// export const addToNotGoing = function(state) {
+//   return state.invite.notGoing
+// }
+
+// export const addToGoing = function(state) {
+//   return state.invite.going
+// }
 
 export default inviteSlice.reducer;
