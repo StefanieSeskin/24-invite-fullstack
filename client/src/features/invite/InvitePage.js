@@ -1,4 +1,5 @@
 import { FaCheck } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
@@ -44,8 +45,8 @@ export default function InvitePage() {
 
     return (
         <div className="selectRSVP">
-            <div className="photo">{guest.email}</div>
-        <button className="notgoing" onClick={notGoing}>X</button>
+            <div className="email">{guest.first}{guest.email}</div>
+        <button className="notgoing" onClick={notGoing}><FaTimes /></button>
         <button className="going" onClick={addGoing}><FaCheck /></button></div>
     )
 }

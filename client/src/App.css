@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.selectRSVP {
+    margin-left: 10vw;
+    margin-top: 20vh;
+}
+
+.going {
+      color: white;
+      background-color: #69bc6c; 
+      border: none;
+      width: 40px;
+      height: 25px;
+  }
+
+.notgoing {
+      color: white;
+      font-weight: 900;
+      background-color: rgb(240, 80, 80);
+      border: transparent;
+      width: 40px;
+      height: 25px;
+      margin-top: 25px;
+      margin-right: 25px;
+  }
+
+  button:focus {
+      outline: none;
+  }
