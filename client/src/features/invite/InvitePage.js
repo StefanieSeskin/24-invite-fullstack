@@ -60,14 +60,19 @@ export default function InvitePage() {
     //component??
 
     return (
-        <div className="selectRSVP">
-            <Counter />
+        <div className="card">
+            <div className="counters"><Counter /></div>
+            <div className="selectRSVP">
             <div className="photo">PHOTO</div>
             <div className="name"><strong>Name:</strong></div>
             <div className="email"><strong>Email:</strong> {guest.email}</div>
             <div className="phone"><strong>Phone:</strong></div>
-        <button className="notgoing" onClick={() => { notGoing(); addNotGoingGuest();}}><FaTimes /></button>
-        <button className="going" onClick={() => { addGoing(); addGoingGuest();}}><FaCheck /></button></div>
+            <div className="buttons">
+            <button className="notgoing" onClick={() => { notGoing(); addNotGoingGuest();}}><FaTimes /></button>
+            <button className="going" onClick={() => { addGoing(); addGoingGuest();}}><FaCheck /></button>
+            </div>
+            </div>
+        </div>
     )
 }
 

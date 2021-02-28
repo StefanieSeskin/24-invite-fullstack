@@ -12,14 +12,14 @@ import styles from './Counter.module.css';
 
 export default function Counter() {
   const count = useSelector(selectCount);
-  const countNot = useSelector(selectCountNot);
+  const counterNot = useSelector(selectCountNot);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
 
   return (
     <div>    
-      <div className={styles.row}>
+      {/* <div className={styles.row}> */}
         {/* <button
           className={styles.button}
           aria-label="Increment value"
@@ -27,8 +27,8 @@ export default function Counter() {
         >
           +
         </button> */}
-        <span className={styles.value}>{count} going</span>
-        <span className={styles.value}>{countNot} not going</span>
+        <span className={styles.value}>Going: {count} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span className={styles.value}>Not going: {counterNot}</span>
         {/* <button
           className={styles.button}
           aria-label="Decrement value"
@@ -36,7 +36,7 @@ export default function Counter() {
         >
           -
         </button> */}
-      </div>
+      {/* </div> */}
       {/* <div className={styles.row}>
         <input
           className={styles.textbox}
