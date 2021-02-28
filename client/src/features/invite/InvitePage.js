@@ -28,8 +28,8 @@ export default function InvitePage() {
     }, [])
 
     function addGoing() {
-        // dispatch(addToGoing(guest))
-        dispatch(incrementAsync(guest))
+        dispatch(addToGoing(guest))
+        // dispatch(incrementAsync(guest))
         axios.get('/test')
         .then(resp => {
             setGuest(resp.data)
@@ -53,6 +53,3 @@ export default function InvitePage() {
     )
 }
 
-//something about asynchronous code.  Need to get name.first and name.last, photo,
-//etc
-// but they don't exist..  This is as far as I can get
