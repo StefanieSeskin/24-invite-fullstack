@@ -5,13 +5,13 @@
 
 .selectRSVP {
     margin-left: 10vw;
-    width: 30vw;
+    width: 38vw;
     padding: 25px;  
     background-color:  rgb(206, 205, 205);
 }
 
 .counters {
-    margin-left: 18vw;
+    margin-left: 22vw;
     margin-top: 20vh;
     margin-bottom: 5px;
     width: 30vw; 
@@ -23,7 +23,7 @@
     margin-left: 30px;
 }
 
-.buttons {
+.buttons,.photo {
     margin-left: 30px;  
     display: flex;
     justify-content: space-around;    
@@ -45,7 +45,7 @@
       border: transparent;
       width: 40px;
       height: 25px;
-      
+
   }
 
   button:focus {

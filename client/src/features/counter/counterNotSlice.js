@@ -1,7 +1,10 @@
+// THIS IS NOTHING //
+
 import { createSlice } from '@reduxjs/toolkit';
 
 export const counterNotSlice = createSlice({
   name: 'counternot',
+  name: 'counter',
   initialState: {
     value: 0,
   },

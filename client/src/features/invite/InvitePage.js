@@ -5,13 +5,11 @@ import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 import Counter from '../counter/Counter'
 import {
-//   increment,
-//   wasInvited,
-  //getIsGoing,
   addToNotGoing,
   addToGoing,
   incrementAsync
 } from './inviteSlice';
+
 import {
     increment,
   } from '../counter/counterSlice';
@@ -53,11 +51,6 @@ export default function InvitePage() {
     function addNotGoingGuest(){
         dispatch(increment())
     }
-    //attempting to experiment with onClick calling two functions; 
-    //Imported Counter component to test it with GOING onClick;
-    //I don't know if it's working or not!  Looks like it, but I would
-    //need to add one for both buttons and copy in the code from the Counter
-    //component??
 
     return (
         <div className="card">
