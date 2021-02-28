@@ -6,32 +6,36 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
+  selectCountNot
 } from './counterSlice';
 import styles from './Counter.module.css';
 
-export function Counter() {
+export default function Counter() {
   const count = useSelector(selectCount);
+  const countNot = useSelector(selectCountNot);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
+
   return (
-    <div>
+    <div>    
       <div className={styles.row}>
-        <button
+        {/* <button
           className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
-        <span className={styles.value}>{count}</span>
-        <button
+        </button> */}
+        <span className={styles.value}>{count} going</span>
+        <span className={styles.value}>{countNot} not going</span>
+        {/* <button
           className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           -
-        </button>
+        </button> */}
       </div>
       {/* <div className={styles.row}>
         <input

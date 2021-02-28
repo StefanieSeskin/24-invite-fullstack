@@ -1,17 +1,26 @@
-I'm going to leave notes like this
+My mentor helped me get things on the page.  
 
-My mentor helped me.  If you click on the buttons, you will see that the
-random user reloads and the server gets both "going", "not going" 
+At this point, I am pretty sure that over the course of 
+four more weeks, I'm not going to be able to train my brain to think differently when it comes to this stuff.  Maybe over time and
+who knows how much time, but longer than four weeks, for sure.
 
-I could not keep him in zoom forever and got stuck on how to set up 
-the going/not going pages.  I also noticed that there is no link or way
-for the client to view those pages.  I guess the client screwed up by
-not asking for that feature.  Now, it's out of scope and they have to pay
-for another 4 weeks of development.  :-D
+COUNTER:  
+I tried to create a slice called counterNotSlice to tally
+"not going" but it
+doesn't work... obviously is not the way to do this.
 
-Also, Marissa tried to help me with the data dump aspect -- just pulling what
-is needed from the json and not the entire json.  I don't understand what
-she was talking about so I just left this as it is 
+Marissa tried to help me with the json -- pulling what is needed from the json.  I don't understand what she was talking about.  I did look at what Thomas posted in slack.  I get the idea -- pull what you need.
+I don't understand why items are "undefined" because the way 
+we used to pull information is now different on the page and I
+do not understand why things are different because.  In the past,
+I pretty much just copied and pasted syntax in order to get 
+items from an array sort of understanding why things work, if that makes sense.  So because this is totally different but the same,
+I don't get it.
 
-Not even attempting the counter.  No clue.  Didn't get it for the shopping cart,
-not going to get it here, even after watching the shopping cart video.
+No clue whatsoever how to visually add the guest data to their respective pages, despite rewatching videos.
+
+ADDING AN IMAGE PLACEHOLDER:
+Spent 1/2 trying to figure out how to add placeholder image in
+React using something from React and gave up.
+
+This is as far as I can get.
