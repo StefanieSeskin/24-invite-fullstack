@@ -10,7 +10,16 @@ app.use(express.json())
 app.get('/test', (req, res) => {
     axios.get('https://randomuser.me/api')
     .then(resp => {
-    res.json(resp.data.results[0])
+        const randomPerson = resp.data.results[0]
+        const newPerson = {
+            phone: randomPerson.phone,
+            email: randomPerson.email,
+            first: randomPerson.name.first,
+            last: randomPerson.name.last,
+            thumbnail: randomPerson.picture.large
+
+        }
+    res.json(newPerson)
     })
 })
 

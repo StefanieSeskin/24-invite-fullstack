@@ -45,7 +45,7 @@ export const { increment, decrement, incrementByAmount, wasInvited, addToGoing, 
 // code can then be executed and other actions can be dispatched
 export const incrementAsync = guest => dispatch => {
   setTimeout(() => {
-    axios.post('/going', { guest })
+    axios.post('/mark-invitee', guest )
     .then(resp => {
         console.log(resp)
     })

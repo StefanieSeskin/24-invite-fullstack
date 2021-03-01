@@ -26,6 +26,7 @@ export default function InvitePage() {
         axios.get('/test')
         .then(resp => {
             setGuest(resp.data)
+            console.log(guest)
         })
     }, [])
 
@@ -36,6 +37,7 @@ export default function InvitePage() {
         .then(resp => {
             setGuest(resp.data)
         })
+        axios.post('/mark-invitee')
     }
     function notGoing() {
         dispatch(addToNotGoing(guest))
@@ -55,17 +57,16 @@ export default function InvitePage() {
     return (
         <div className="card">
             <div className="counters"><Counter /></div>
-            <div className="selectRSVP">
-            <div className="photo">PHOTO</div>
-            <div className="name"><strong>Name:</strong></div>
-            <div className="email"><strong>Email:</strong> {guest.email}</div>
-            <div className="phone"><strong>Phone:</strong></div>
-            <div className="buttons">
-            <button className="notgoing" onClick={() => { notGoing(); addNotGoingGuest();}}><FaTimes /></button>
-            <button className="going" onClick={() => { addGoing(); addGoingGuest();}}><FaCheck /></button>
+                <div className="selectRSVP">
+                <div className="photo" ><img src={guest.thumbnail}></img></div>
+                <div className="name"><strong>Name: {guest.first} {guest.last}</strong></div>
+                <div className="email"><strong>Email:</strong> {guest.email}</div>
+                <div className="phone"><strong>Phone: {guest.phone}</strong></div>
+                <div className="buttons">
+                <button className="notgoing" onClick={() => { notGoing(); addNotGoingGuest();}}><FaTimes /></button>
+                <button className="going" onClick={() => { addGoing(); addGoingGuest();}}><FaCheck /></button>
             </div>
             </div>
         </div>
     )
 }
-
