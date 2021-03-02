@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const axios = require('axios')
-const users = [{id: 1, name:"john"}]
 
 
 app.use(express.urlencoded({ extended: false }))
@@ -35,7 +34,7 @@ app.get('/testing', (req, res) => {
 app.post('/users', (req, res) => {
     const user = req.body
     // console.log(req.body)
-    users.push({...user, id: 0})
+    users.push()
     res.json(user)
 })
 
