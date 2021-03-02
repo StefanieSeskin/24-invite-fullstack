@@ -6,9 +6,6 @@ import { useSelector, useDispatch } from 'react-redux';
 export default function GoingPage() {
     const dispatch = useDispatch();
     const [guest, setGuest] = useState({});
-    // refactor to use slice
-  
-
 
     return (
         <div className="card">
