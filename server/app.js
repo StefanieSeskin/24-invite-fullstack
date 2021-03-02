@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 
-const going = []
+const isGoing = []
 const notGoing = []
 
 app.use(express.urlencoded({ extended: false }))
@@ -24,7 +24,7 @@ app.get('/test', (req, res) => {
 })
 
 app.get('/going', (req, res) => {
-    res.json(going)
+    res.json(isGoing)
 })
 
 app.get('/not-going', (req, res) => {
@@ -36,7 +36,7 @@ app.post('/mark-invitee', (req, res) => {
     const guest = req.body
     console.log(req.body)
    if(guest.isGoing == true){
-       going.push(guest)
+       isGoing.push(guest)
    } else {
        notGoing.push(guest)
    }

@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux';
 
-export default function NotGoingPage() {
+export default function GoingPage() {
     const dispatch = useDispatch();
     const [guests, setGuests] = useState([]);
     useEffect(() => {
-        axios.get('going')
+        axios.get('/going')
         .then(resp => {
             setGuests(resp.data)
         })
@@ -19,7 +19,7 @@ export default function NotGoingPage() {
             return <div className="name">
                 <strong>Name: </strong>{guest.first}&nbsp; {guest.last}</div>
                 // <div> I add a div, I get red squiggles.  No idea
-                // why I can't add a new div which means I can't add any of then
+                // why I can't add a new div which means I can't add any of the
                 // other guest info in the array</div>
 
         })}

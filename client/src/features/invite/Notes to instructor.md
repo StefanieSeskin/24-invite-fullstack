@@ -1,4 +1,6 @@
 ROUND TWO
 
-This was working after Derrique helped.  It was calling a new random user.
-For some reason, it stopped.
+Don't know why GOING doesn't work.
+
+Don't know how css file is imported into GOING and NOT GOING
+Don't know why I can only add one div to NOT GOING
