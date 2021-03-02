@@ -16,12 +16,6 @@ export const inviteSlice = createSlice({
       // immutable state based off those changes
       state.value += 1;
     },
-    decrement: state => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
 
     wasInvited: (state, action) => {
       state.invited.push(action.payload);
@@ -37,7 +31,7 @@ export const inviteSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, wasInvited, addToGoing, addToNotGoing } = inviteSlice.actions;
+export const { increment, wasInvited, addToGoing, addToNotGoing } = inviteSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -46,8 +40,9 @@ export const { increment, decrement, incrementByAmount, wasInvited, addToGoing, 
 export const add = guest => dispatch => {
     axios.post('/mark-invitee', guest )
     .then(resp => {
-        // console.log(resp)
+        console.log(resp)
     })
+  
   }
 
 // The function below is called a selector and allows us to select a value from

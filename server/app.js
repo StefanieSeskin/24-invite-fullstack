@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 
+const going = []
+const notGoing = []
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
@@ -16,29 +18,31 @@ app.get('/test', (req, res) => {
             first: randomPerson.name.first,
             last: randomPerson.name.last,
             thumbnail: randomPerson.picture.large
-
         }
     res.json(newPerson)
     })
 })
 
-app.post('/going', (req, res) => {
-    res.json({hello: true})
+app.get('/going', (req, res) => {
+    res.json(going)
 })
 
-app.get('/testing', (req, res) => {
-    res.json({hello: true})
+app.get('/not-going', (req, res) => {
+    res.json(notGoing)
 })
 
 
-app.post('/users', (req, res) => {
-    const user = req.body
-    // console.log(req.body)
-    users.push()
-    res.json(user)
+app.post('/mark-invitee', (req, res) => {
+    const guest = req.body
+    console.log(req.body)
+   if(guest.isGoing == true){
+       going.push(guest)
+   } else {
+       notGoing.push(guest)
+   }
+    res.json(guest)
 })
 
-//
 
 app.listen(3001, (req, res) => {
     console.log('listening on port 3001')

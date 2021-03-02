@@ -10,6 +10,16 @@
     background-color:  rgb(206, 205, 205);
 }
 
+.finishedRSVP {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 10vw;
+    width: 38vw;
+    padding: 25px;  
+    background-color:  rgb(206, 205, 205);
+}
+
+
 .counters {
     margin-left: 22vw;
     margin-top: 20vh;

@@ -1,29 +1,4 @@
-My mentor helped me get things going on the page.  At some point,
-the objects were being posted to the server, but I don't know
-if they are any more because I forget how to check that.  
-I messed around with the files so much, I don't know what I
-may have changed.
+ROUND TWO
 
-Still having a hard time trying to train my brain to think 
-differently when it comes to this stuff.  Maybe I will get it over time but longer than four weeks, for sure.
-
-COUNTER:  
-I tried to create a slice called counterNotSlice to tally
-"not going" but it
-doesn't work... obviously that is not the way to do this.  I know I'm overthinking.
-I realize Thomas showed us several times how to make counters.
-
-
-PULLING FROM JSON:
-Marissa tried to help me with the json -- pulling what is needed from the json.  I don't understand what she was talking about.  I did look at what Thomas posted in slack.  I get the idea -- pull what you need.
-I don't understand why items are "undefined" because the way 
-we used to pull information is now different.
-
-GOING AND NOT GOING .JS FILES:
-No clue whatsoever how to visually add the guest data to their respective pages, despite rewatching videos.
-
-ADDING AN IMAGE PLACEHOLDER:
-Spent 1/2 trying to figure out how to add placeholder image in
-React using something from React and gave up.
-
-This is as far as I can get
+This was working after Derrique helped.  It was calling a new random user.
+For some reason, it stopped.
